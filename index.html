@@ -85,7 +85,10 @@
   <audio id="backgroundMusic" src="assets/music.mp3" loop></audio>
 
 <script>
-  const messages = ["I Miss You !"];
+  const messages = [" Chúc các bạn 20 tháng 10 "];
+   const messages = ["Minh Phương"]; 
+     const messages = ["Gay"]; 
+  
   const colors = ["white"];
   const dialog = document.getElementById("startDialog");
   const audio = document.getElementById("backgroundMusic");
@@ -116,15 +119,9 @@
   }
 
   function startPopups(count) {
-    let created = 0;
-    const interval = setInterval(() => {
-      if (created >= count) {
-        clearInterval(interval);
-        return;
-      }
+  
       createPopup();
-      created++;
-    }, 30);
+    
   }
 
   function enterFullscreen() {
@@ -146,7 +143,7 @@
       console.log("Lỗi phát nhạc:", error);
     });
     enterFullscreen();
-    startPopups(200);
+    startPopups();
     document.removeEventListener("click", startExperience);
   });
 </script>
